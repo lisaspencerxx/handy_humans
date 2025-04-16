@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Ticker animation */
+.ticker-wrap {
+  width: 100%;
+  overflow: hidden;
+  height: 4rem;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 1rem 0;
+}
+
+.ticker {
+  display: inline-flex;
+  white-space: nowrap;
+  animation: ticker 30s linear infinite;
+}
+
+.ticker-item {
+  display: inline-flex;
+  padding: 0 2rem;
+  font-size: 1.2rem;
+  color: #10b981;
+}
+
+@keyframes ticker {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/* For 3D canvas */
+canvas {
+  touch-action: none;
+}
